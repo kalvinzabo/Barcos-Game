@@ -13,6 +13,8 @@ public class Movement : MonoBehaviour
     Vector3 _rotation;
     Coroutine lerpSpeedCoroutine;
     Transform _rotationPivot;
+    public GameObject smallSail, bigSail;
+
     void Start()
     {
         body = GetComponent<Rigidbody>();
@@ -75,6 +77,7 @@ public class Movement : MonoBehaviour
             default:
                 break;
         }
+        SetSails(_speedSetting);
     }
 
     IEnumerator LerpSpeed(float targetSpeed)
@@ -93,5 +96,27 @@ public class Movement : MonoBehaviour
     void Lean()
     {
         _rotationPivot.localRotation = Quaternion.Euler(0, 0, _rotationInputScaled*70f);   
+    }
+
+    void SetSails(int sails)
+    {
+
+        switch(sails)
+        {
+            case 0:
+                smallSail.SetActive(false);
+                bigSail.SetActive(false);
+                break;
+            case 1:
+                smallSail.SetActive(false);
+                bigSail.SetActive(true);
+                break;
+            case 2:
+                smallSail.SetActive(true);
+                bigSail.SetActive(true);
+                break;
+            default:
+                break;
+        }
     }     
 }
