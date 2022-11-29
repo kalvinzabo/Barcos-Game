@@ -8,14 +8,16 @@ public class Movement : MonoBehaviour
     public float _maxRotationSpeed, _maxSpeed, _speedChangeDuration;
     
     [SerializeField]
-    float _rotationInput, _currentSpeed;
+    float _rotationInputScaled, _currentSpeed;
     int _speedSetting = 1;
     Vector3 _rotation;
     Coroutine lerpSpeedCoroutine;
+    Transform _rotationPivot;
     void Start()
     {
         body = GetComponent<Rigidbody>();
         _currentSpeed = _maxSpeed/2;
+        _rotationPivot = transform.GetChild(0);
     }
     void Update()
     {
@@ -26,15 +28,18 @@ public class Movement : MonoBehaviour
         else if(Input.GetButtonDown("Slower"))
         {   ChangeSpeed(false);}
         
-        body.velocity = transform.up*_currentSpeed;
+        body.velocity = transform.forward*_currentSpeed;
 
         //change rotation speed part
-        _rotationInput = Input.GetAxis("Horizontal");
-        if(Mathf.Approximately(_rotationInput*_maxRotationSpeed, body.angularVelocity.x))
+        _rotationInputScaled = Input.GetAxis("Horizontal")*_maxRotationSpeed;
+        if(Mathf.Approximately(_rotationInputScaled, body.angularVelocity.x))
         {   return;}
         
-        _rotation = new Vector3(0, _rotationInput*_maxRotationSpeed, 0);
+        _rotation = Vector3.up * _rotationInputScaled;
         body.angularVelocity = _rotation;
+        
+        //lean to one side
+        Lean();
     }
 
     void ChangeSpeed(bool faster)
@@ -84,4 +89,9 @@ public class Movement : MonoBehaviour
             yield return null;
         }
     }
+
+    void Lean()
+    {
+        _rotationPivot.localRotation = Quaternion.Euler(0, 0, _rotationInputScaled*70f);   
+    }     
 }
