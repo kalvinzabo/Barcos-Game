@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Island
+  - Goods
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enter Area
   - Water
   - UI
   - 

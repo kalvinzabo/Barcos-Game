@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    Rigidbody body;
     public float _maxRotationSpeed, _maxSpeed, _speedChangeDuration;
     
-    [SerializeField]
     float _rotationInputScaled, _currentSpeed;
     int _speedSetting = 1;
     Vector3 _rotation;
+
     Coroutine lerpSpeedCoroutine;
+    Rigidbody body;
     Transform _rotationPivot;
     public GameObject smallSail, bigSail;
 
