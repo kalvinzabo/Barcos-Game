@@ -1,0 +1,1 @@
+- añadir pantalla de mejoras en la que aumentas la cantidad de cosas que puedes desplazar, las armas, la velocidad etc.
