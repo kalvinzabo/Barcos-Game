@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Island
   - Goods
+  - Base
   layers:
   - Default
   - TransparentFX

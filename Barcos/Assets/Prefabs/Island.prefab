@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6652776661895086698}
   - component: {fileID: 8618507764965334405}
   - component: {fileID: 680739708673672588}
+  - component: {fileID: 5935524008523214111}
   m_Layer: 3
   m_Name: Enter Area
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,6 +60,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b2c22b0043605febedcd33dd0c0149, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentGoods: 
+--- !u!114 &5935524008523214111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8358772944044932200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec41463b5315fb40bb2b262cc8edb771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  amount: 1
 --- !u!1 &8733452453105197786
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,6 +87,7 @@ GameObject:
   - component: {fileID: 5593075782682422289}
   - component: {fileID: 4880126369508416883}
   - component: {fileID: 31905918288150264}
+  - component: {fileID: 1121581391490737799}
   m_Layer: 3
   m_Name: good
   m_TagString: Goods
@@ -157,6 +174,20 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1121581391490737799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8733452453105197786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec41463b5315fb40bb2b262cc8edb771, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+  amount: 1
 --- !u!1 &8931042700256455078
 GameObject:
   m_ObjectHideFlags: 0

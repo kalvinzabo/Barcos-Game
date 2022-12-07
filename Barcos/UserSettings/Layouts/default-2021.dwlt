@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1846
     height: 991
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 436
     height: 941
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -268,8 +268,8 @@ MonoBehaviour:
     y: 0
     width: 1062
     height: 560
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -317,22 +317,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /home/javiarias/Documentos/GitHub/Barcos/Barcos
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ae5d0000
-    m_LastClickedID: 23982
-    m_ExpandedIDs: 00000000825d000000ca9a3b
+    m_SelectedIDs: b65d0000
+    m_LastClickedID: 23990
+    m_ExpandedIDs: 00000000b65d0000e45d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -360,7 +360,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000825d0000
+    m_ExpandedIDs: 00000000b65d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -488,20 +488,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: eee7ffff
-      m_LastClickedID: -6162
-      m_ExpandedIDs: 62d2ffffb8d3ffff26eeffff1cfbffff36fbffffe25c0000ea5c00003a5d0000405d0000
+      m_SelectedIDs: 9049ffff
+      m_LastClickedID: -46704
+      m_ExpandedIDs: b4faffffbcfaffffdafafffff8faffff16fbffff34fbffff36fbffff0c5d0000585d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Ship Controller
-        m_OriginalName: Ship Controller
+        m_Name: Center (Corsair Base)
+        m_OriginalName: Center (Corsair Base)
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 23778
+        m_UserData: 23820
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -739,9 +739,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -38.39064, y: -0.3003319, z: 308.6237}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: -38.39064, y: -0.3003319, z: 308.6237}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -788,13 +788,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.019485027, y: -0.58413094, z: 0.014008871, w: 0.81133306}
+    m_Target: {x: -0.269565, y: -0.020793514, z: 0.0058233608, w: -0.96276444}
     speed: 2
-    m_Value: {x: 0.019484576, y: -0.5841174, z: 0.014008547, w: 0.8113143}
+    m_Value: {x: -0.26955867, y: -0.020793026, z: 0.005823224, w: -0.96274185}
   m_Size:
-    m_Target: 4.547652
+    m_Target: 3.2630901
     speed: 2
-    m_Value: 4.547652
+    m_Value: 3.2630901
   m_Ortho:
     m_Target: 1
     speed: 2

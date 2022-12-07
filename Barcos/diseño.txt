@@ -1,0 +1,11 @@
+isla 1 ofrece a cambio de. Isla 2 pide a cambio de.  Tu comportamiento ideal es coger recursos de alguien que ofrece y llevarselos a alguien que pide. Si el que ofrece no recibe lo que habia pedido en x tiempo, represalias. Las ofertas, tanto de dar como de pedir caducan en y tiempo. Hay que tener eso en cuenta a la hora de valorar si da tiempo o no. Si se devuelve a alguien que habia ofrecido la cantidad misma de lo que ofreció se anula la represalia. Si se devuelve lo que el que ofrecía había pedido, además se da una recompensa en recursos para el del barco. Se puede ofrecer gratuitamente a una isla recursos, a lo que esa isla responderá con una recompensa (y posiblemente afinidad). Para la versión inicial, si una isla consigue uno de cada gana.
+
+- Cuantos recursos puede llevar el barco? Sugiero que uno y que haya una isla en la que deje sus propios recursos y lleve mejoras. Si te destruyen pierdes el que llevaras encima y reapareces ahí.
+
+- Hay que añadir otra isla donde puedas ver todas las ofertas y peticiones. Probablemente ella tenga el script MarketController y genere eventos a los que las islas se suscriban.
+
+- La implementacion actual de goods en la que el aspecto de los goods se decide segun el nombre de la isla es buena porque solo se pueden generar recursos en las islas.
+
+- que pasa si tengo un material que ya no quiere nadie? tiene que ser o una recompensa o algo que me han ofrecido. O vuelvo a la base a llevarlo o lo devuelvo al que lo dio.
+
+- tengo que implementar un minimapa o brujula.

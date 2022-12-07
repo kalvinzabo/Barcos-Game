@@ -4,36 +4,49 @@ using UnityEngine;
 
 public class GoodsHandler : MonoBehaviour
 {
-    Transform currentGoods;
+    Transform currentGoodsT;
     public Transform shipHold;
-    // private void Update()
-    // {
-    //     if(currentGoods == null)
-    //     {   return;}
-
-    //     currentGoods.position = shipHold.position;    
-    // }
+    IslandController currentIsland;
+    public GameObject corsairBase;
+    
     private void OnTriggerEnter(Collider other)
     {
-        if(currentGoods != null)
+        if(other.gameObject.layer != 3)        //"Enter Area" Layer. Por ahora no se pueden usar triggers para nada más desde el player, pero otros agentes sí podrían hacer cosas al verle entrar en sus propios triggers.
+        {   return;}
+
+        if(other.CompareTag("Base"))
+        {}
+
+        if(currentIsland != null && other.CompareTag("Island"))
+        {   return;}
+
+        currentIsland = other.GetComponent<IslandController>();
+        currentIsland.AskGoodsTrade();
+        
+        if(currentGoodsT == null)   //esto es matizable, tienen que darse mas cosas.
         {
-            Debug.Log("already carrying goods");
+            currentGoodsT = currentIsland.GiveGoods().transform; 
+            SetCurrentGoodsTransform();
             return;
         }
+        
+        Debug.Log("already carrying goods");
+        currentIsland.TakeGoods(currentGoodsT.gameObject);             
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.gameObject.layer != 3)
+        {   return;}
 
-        if(other.gameObject.layer == 3)     //"Enter Area" layer
-        {
-            IslandController currentIsland = other.GetComponent<IslandController>();
-            currentGoods = currentIsland.GiveGoods().transform;  
-            SetCurrentGoods();          
-        }        
+        if(currentIsland != null && other.CompareTag("Island"))
+        {   currentIsland = null;}          
     }
 
-    void SetCurrentGoods()      //adjust transform properties to avoid deformation if you pick it up while leaning.
+    void SetCurrentGoodsTransform()      //adjust transform properties to avoid deformation if you pick it up while leaning.
     {
-        currentGoods.SetParent(shipHold, true);
-        currentGoods.position = shipHold.position;
-        currentGoods.localRotation = Quaternion.Euler(Vector3.back*90);
-        currentGoods.localScale = new Vector3(0.25f, 1.2f, 0.25f);
+        currentGoodsT.SetParent(shipHold, true);
+        currentGoodsT.position = shipHold.position;
+        currentGoodsT.localRotation = Quaternion.Euler(Vector3.back*90);
+        currentGoodsT.localScale = new Vector3(0.25f, 1.2f, 0.25f);
     }
 }
