@@ -68,6 +68,9 @@ public class IslandController : MonoBehaviour
     {
         Debug.Log("I want " + goodsWanted.GetAmount() + " of " + goodsWanted.GetTypeOfGoodString());
     }
+
+    public Goods GetGoodsWanted()
+    {    return goodsWanted;}
     
     void SetGoodsToAskFor()
     {

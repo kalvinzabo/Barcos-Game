@@ -7,7 +7,8 @@ public class GoodsHandler : MonoBehaviour
     Transform currentGoodsT;
     public Transform shipHold;
     IslandController currentIsland;
-    public GameObject corsairBase;
+    
+    // public GameObject corsairBase;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -15,7 +16,7 @@ public class GoodsHandler : MonoBehaviour
         {   return;}
 
         if(other.CompareTag("Base"))
-        {}
+        {   return;}
 
         if(currentIsland != null && other.CompareTag("Island"))
         {   return;}

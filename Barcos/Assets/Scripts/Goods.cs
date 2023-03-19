@@ -13,7 +13,7 @@ public class Goods : MonoBehaviour
         Clay
     }
 
-    public TypesOfGoods type;
+    public TypesOfGoods type {get; private set;}
     
     [SerializeField]
     int amount = 1;
@@ -23,7 +23,8 @@ public class Goods : MonoBehaviour
     private void Start()
     {
         if(!CompareTag("Goods"))
-        {   return;}
+        //parece que esto es necesario porque el enterarea de las islas tiene un goods, pero no termino de entender por que.
+        {   return; }
 
         myIsland = transform.parent.gameObject.GetComponent<IslandController>();
         render = GetComponent<Renderer>();
